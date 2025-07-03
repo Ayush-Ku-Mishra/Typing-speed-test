@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Typing Speed Test</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="headings">
+    <h3>TYPING SPEED TEST</h3>
+    <h1>Test your typing skills</h1>
+  </div>
+
+  <div class="container">
+    <div class="stats">
+      <div class="timer">
+        <h2 id="timer">60</h2>
+        <p>seconds</p>
+      </div>
+
+      <div class="stat">
+        <div class="value">
+          <h2 id="wpm">0</h2>
+        </div>
+        <p>words/min</p>
+      </div>
+
+      <div class="stat">
+        <div class="value">
+          <h2 id="cpm">0</h2>
+        </div>
+        <p>chars/min</p>
+      </div>
+
+      <div class="stat">
+        <div class="value">
+          <h2 id="accuracy">0</h2>
+        </div>
+        <p>% accuracy</p>
+      </div>
+    </div>
+
+    <div class="typing-container">
+      <div id="text-display">Loading text...</div>
+      <input 
+        type="text" 
+        id="user-input" 
+        placeholder="Start typing..." 
+        autocomplete="off" 
+      />
+      <button id="reset">
+        <span>Try Again</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="paragraphs.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>

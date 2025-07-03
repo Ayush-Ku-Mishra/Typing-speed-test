@@ -1,0 +1,291 @@
+body {
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('/assets/LetterBG.jpg') no-repeat center center fixed;
+  background-size: cover;
+  max-width: 800px;
+}
+
+.headings {
+  text-align: center;
+}
+
+h1 {
+  margin: 1px 0 0 0;
+  font-size: 4rem;
+  color: #2c3e50;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+  color: #7f8c8d;
+  margin-bottom: 1px;
+  font-size: 0.9rem;
+  letter-spacing: 3px;
+  animation: gentlePulse 3s ease-in-out infinite;
+  display: inline-block;
+}
+
+@keyframes gentlePulse {
+  0%, 100% {
+    opacity: 0.9;
+    text-shadow: 0 0 0 rgba(102, 102, 102, 0.3);
+  }
+  50% {
+    opacity: 1;
+    text-shadow: 0 0 8px rgba(102, 102, 102, 0.6);
+  }
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin: 40px 0;
+}
+
+.timer {
+  width: 100px;
+  height: 100px;
+  border: 5px solid #FFC107;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.95);
+  animation: rainbowBorder 4s linear infinite;
+}
+
+@keyframes rainbowBorder {
+  0%   { border-color: #FFC107; }
+  25%  { border-color: #FF6B6B; }
+  50%  { border-color: #4ECDC4; }
+  75%  { border-color: #45B7D1; }
+  100% { border-color: #FFC107; }
+}
+
+.timer h2 {
+  font-size: 35px;
+  margin: 0;
+  color: #2c3e50;
+}
+
+.timer p {
+  margin: 2px 0 0 0;
+  font-size: 15px;
+  color: #333;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat .value {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 15px 20px;
+  min-width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px double #3498db;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.stat h2 {
+  font-size: 25px;
+  margin: 0;
+  color: #2c3e50;
+}
+
+.stat p {
+  margin-top: 8px;
+  font-size: 15px;
+  color: #7f8c8d;
+  text-align: center;
+}
+
+.typing-container {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 30px auto 0 auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border: 1px solid #ecf0f1;
+}
+
+#text-display {
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: left;
+  min-height: 90px;
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  background: rgba(249, 249, 249, 0.9);
+  overflow-y: auto;
+  word-wrap: break-word;
+  color: #34495e;
+}
+
+#user-input {
+  width: 100%;
+  padding: 12px;
+  font-size: 17px;
+  border: 1px solid #bdc3c7;
+  border-radius: 6px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.9);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#user-input:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+#reset {
+  position: relative;
+  align-self: flex-end;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(45deg, #3498db, #2ecc71);
+  padding: 9px 18px;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+  overflow: hidden;
+}
+
+#reset span {
+  position: relative;
+  z-index: 1;
+}
+
+#reset::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: #2c3e50;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+#reset::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, #3498db, #2ecc71);
+  border-radius: 6px;
+  filter: blur(20px);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+#reset:hover::before {
+  opacity: 0.8;
+}
+
+#reset:hover::after {
+  opacity: 1;
+}
+
+.correct {
+  color: #27ae60;
+}
+
+.incorrect {
+  color: #e74c3c;
+  text-decoration: underline;
+  text-decoration-color: #c0392b;
+}
+
+/* ✅ Responsive for small screens */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h3 {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+  }
+
+  .stats {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .timer {
+    width: 80px;
+    height: 80px;
+  }
+
+  .timer h2 {
+    font-size: 28px;
+  }
+
+  .timer p {
+    font-size: 13px;
+  }
+
+  .stat .value {
+    padding: 12px 16px;
+    min-width: 50px;
+  }
+
+  .stat h2 {
+    font-size: 22px;
+  }
+
+  .stat p {
+    font-size: 13px;
+  }
+
+  .typing-container {
+    padding: 15px;
+    margin-top: 20px;
+  }
+
+  #text-display {
+    font-size: 16px;
+    padding: 10px;
+    min-height: 80px;
+  }
+
+  #user-input {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  #reset {
+    padding: 8px 16px;
+    font-size: 14px;
+    align-self: center;
+  }
+}
+
