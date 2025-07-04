@@ -108,7 +108,6 @@ function resetTest() {
   isTyping = false;
 }
 
-// Event Listeners
 inputField.addEventListener('input', handleInput);
 
 // Focus input on click or keydown
@@ -130,8 +129,6 @@ video.addEventListener('ended', () => {
   main.style.display = 'block';
 });
 
-
-// Hide splash after 3 seconds (even if video hasn't ended)
 setTimeout(() => {
   splash.style.display = 'none';
   main.style.display = 'block';

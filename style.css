@@ -219,7 +219,7 @@ h3 {
   text-decoration-color: #c0392b;
 }
 
-/* ✅ Responsive for small screens */
+/* Responsive for small screens */
 @media (max-width: 600px) {
   body {
     padding: 10px;
