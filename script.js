@@ -121,3 +121,18 @@ loadParagraph();
 const resetBtn = document.getElementById('reset');
 resetBtn.addEventListener('click', resetTest);
 
+const video = document.getElementById('splashVideo');
+const splash = document.getElementById('splash');
+const main = document.getElementById('mainContent');
+
+video.addEventListener('ended', () => {
+  splash.style.display = 'none';
+  main.style.display = 'block';
+});
+
+
+// Hide splash after 3 seconds (even if video hasn't ended)
+setTimeout(() => {
+  splash.style.display = 'none';
+  main.style.display = 'block';
+}, 2000); // hide splash after 2 seconds
