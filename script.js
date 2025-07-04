@@ -132,4 +132,4 @@ video.addEventListener('ended', () => {
 setTimeout(() => {
   splash.style.display = 'none';
   main.style.display = 'block';
-}, 2000); // hide splash after 2 seconds
+}, 3000); // hide splash after 2 seconds
